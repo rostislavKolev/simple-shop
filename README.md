@@ -6,6 +6,9 @@ Java Version:
 DB:
   PostgreSQL
 
+You can find API documentation after running the project 
+on this url: http://localhost:8080/ui-docs.html
+
 Current application has these three entities:
 
 1.Product
