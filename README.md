@@ -1,6 +1,11 @@
 # simple-shop
 Spring Boot application that handles CRUD operations for a simple shop.
 
+Java Version:
+  sourceCompatibility = '1.8'
+DB:
+  PostgreSQL
+
 ###Current application has these three entities:
 
 1.Product
