@@ -6,7 +6,7 @@ Java Version:
 DB:
   PostgreSQL
 
-###Current application has these three entities:
+Current application has these three entities:
 
 1.Product
  - long id
@@ -27,7 +27,7 @@ DB:
 3.Purchase
  - long id
  - purchaseId
- - externalId
+ - externalId (unique, added in order to achieve idempotency)
  - subscriberId
  - List of purchaseDetails
 
@@ -37,7 +37,7 @@ DB:
  - productId
  - quantity
 
-###Controllers:
+Controllers:
 1.ProductController currently provides endpoints for:
  - Create Product
  - Get Product
@@ -53,10 +53,10 @@ DB:
 
 3.PurchaseController currently provides endpoints for:
   - Create Purchase
-  - Get Subscriber
+  - Get Purchase
 
 
-###Tests:
+Tests:
 1.ProductController has currently only one test.. 
 
 
