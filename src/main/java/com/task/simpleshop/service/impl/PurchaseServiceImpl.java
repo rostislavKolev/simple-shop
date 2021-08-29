@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -36,6 +37,7 @@ public class PurchaseServiceImpl implements PurchaseService {
         return purchaseDto;
     }
 
+    @Transactional
     @Override
     public void createPurchase(PurchaseDto purchaseDto) {
         Purchase purchase = purchaseRepository.findPurchaseByExternalId(purchaseDto.getExternalId());
